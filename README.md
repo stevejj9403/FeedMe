@@ -1,5 +1,6 @@
 # FeedMe
 //if there is trouble running the project, the browser used in the demo was Google Chrome.
+
 Method 1: 
 Open the index.html file in the dist folder to run the project in your browser.
 
