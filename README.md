@@ -1,4 +1,4 @@
 # FeedMe
-Import code into visual studio, and make sure the live server extension by Ritwick is installed.
-Open the index.html file in the IDE, and click go live from the live server extension at the bottom right.
-If the directory folder opens in your browser, click the dist folder.
+1. Import code or clone repository into visual studio code, and make sure the 
+    live server extension by Ritwick is installed.
+2. Once the folder repository is opened in vs code, click go live at the bottom.
