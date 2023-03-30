@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script type="module" src="index.js"></script>
+    <script src="modals.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body class = "grey lighten-3">
+    <nav class ="z-depth-0 grey lighten-2">
+            <div class = "nav-wrapper-container">
+                <a href = "#" class="brand-logo">
+                    <img src="FeedMe.png" style ="width:180px; margin-top: -45px;" id = 'logo'>
+                </a>
+                <ul id="nav-mobile" class = "right hide-on-med-and-down">
+                    <li class = "logged-in" style="display: none;">
+                        <a href="#" class="black-text modal-trigger" data-target="modal-account">Account</a>
+                    </li>
+                    <li class = "truckowner" style="display: none;">
+                        <a href="#" class="black-text" id = 'create-pin-menu'>Create Pin</a>
+                    </li>
+                    <li class = "logged-in" style="display: none;">
+                        <a href="#" class="black-text" id="logout">Logout</a>
+                    </li>
+                    <li class = "logged-out" style="display: none;">
+                        <a href="#" class="blue-text modal-trigger" data-target="modal-login">Login</a>
+                    </li>
+                    <li class = "logged-out" style="display: none;">
+                        <a href="#" class="red-text modal-trigger" data-target="modal-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- SIGNUP MODAL -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+          <h4>Sign up</h4><br />
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="email" id="signup-email" required />
+              <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="signup-password" required />
+              <label for="signup-password">Choose password</label>
+            </div>
+            <label class = 'slider_round'>
+                <input id = 'truckCheckBox' type = 'checkbox'>
+                <span class = 'slider_round'>Are you a food truck?</span>
+            </label>
+            <button class="btn yellow darken-2 z-depth-100">Sign up</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+          <h4>Login</h4><br />
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+            </div>
+            <div class = "login-fail"></div>
+            <button class="btn yellow darken-2 z-depth-0">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ACCOUNT MODAL -->
+      <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+          <h4>Account Information</h4><br />
+          <div class="account-details"></div>
+        </div>
+      </div>
+
+    <input id="search" type="text" placeholder="Search for a location..." />
+
+    <div class = map_ui>
+      <div id="map"></div>
+
+      <div id = 'create-pin-form' style="display: none;">
+        <p class = 'instruction-style' id="instructions">Enter your food truck's name, descirption, then click the button below</p>
+        <form id="create-form">
+          <div class="input-field">
+            <input type="text" id="truck-name" />
+            <label for="foodtruck-name">Food Truck Name</label>
+          </div>
+          <div class="input-field">
+            <label for = 'desc'>Food truck desc</label>
+            <textarea id = 'truck-desc' rows = '10' cols= '50' name = 'truck description' spellcheck="true" required></textarea>
+          </div>
+          
+        </form>
+
+        <button class = 'btn yello darken-2' id = 'truck-sub'>Submit Information & Place Marker</button>
+        <button class = 'createpin' id = 'cancel-pin'>cancel</button>
+        
+        <p></p>
+        <p class = 'instruction-style' id = 'instruction2' style = 'display: none;'>You may now place your marker.</p>
+      
+      </div>
+    </div>
+
+
+  
+
+    <! DONT ADD CODE BEYOND THIS POINT>
+    <! this is a comment, the script src refers to the bundle js file >
+    <script src="bundle.js"></script>
+
+    <! Maps api set up>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCr-8xprV8NgR4H0qudF2qg0wauB1szpSU&callback=initMap&v=weekly"
+      defer
+    ></script>
+    
+</body>
+</html>
