@@ -9,3 +9,5 @@ Method 2:
     live server extension by Ritwick is installed.
 2. Once the folder repository is opened in vs code, click go live at the bottom.
 3. Once the file opens in your browser, if the files in the repository are shown, click on the dist folder.
+
+**CURRENTLY, THE GOOGLE MAPS API KEY IS INVALID**
